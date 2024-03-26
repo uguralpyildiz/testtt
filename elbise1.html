@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-   
+    
     <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -105,13 +105,7 @@
                 <small>(örn. 5551234567)</small><br><br>
 
                 
-                    <input required type="text" id="start-date" name="start-date" placeholder="Başlangıç Tarihi" autocomplete="none">
-                    <br><br>
-                    <input required type="text" id="end-date" name="end-date" placeholder="Bitiş Tarihi" autocomplete="none">
-                    <br>
-                    <div id="date-difference"></div>
-                    <br>
-                    <div id="total-amount"></div>
+                    
                 
                 
 
@@ -126,7 +120,13 @@
 
     <main style="margin-top: 50px;">
         <div class="container">
-           
+        <input required type="text" id="start-date" name="start-date" placeholder="Başlangıç Tarihi" autocomplete="none">
+        <br><br>
+        <input required type="text" id="end-date" name="end-date" placeholder="Bitiş Tarihi" autocomplete="none">
+        <br>
+        <div id="date-difference"></div>
+        <br>
+        <div id="total-amount"></div>
             <div class="grid product">
                 <div class="column-xs-12 column-md-7">
                     <div class="product-gallery">
@@ -333,7 +333,28 @@
 
         
         
-    
+    const activeImage = document.querySelector(".product-image .active");
+        const productImages = document.querySelectorAll(".image-list img");
+        const navItem = document.querySelector('a.toggle-nav');
+
+        function changeImage(e) {
+            activeImage.src = e.target.src;
+        }
+
+        function toggleNavigation() {
+            this.nextElementSibling.classList.toggle('active');
+        }
+
+        productImages.forEach(image => image.addEventListener("click", changeImage));
+        navItem.addEventListener('click', toggleNavigation);
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween:10,
+        loop:true,
+        navigation: {
+            nextEl: ".r1-btn",
+            prevEl: ".l1-btn",
+        },
+    });
 </script>
 </body>
 </html>
