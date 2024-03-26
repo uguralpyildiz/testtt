@@ -33,6 +33,13 @@
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e2bce648c2.js" crossorigin="hurphygames"></script>
+    <style type="text/css" media="print">
+        /* Yazdırma işlemi sırasında tarih seçici alanları için stil */
+        #start-date,
+        #end-date {
+            display: inline !important;
+        }
+    </style>
 </head>
 <body>
     
@@ -105,7 +112,7 @@
                 <small>(örn. 5551234567)</small><br><br>
 
                 
-                    <div class="vsd" style="z-index: 9999 !important; display: block !important;">
+                 
                         <input required type="text" id="start-date" name="start-date" placeholder="Başlangıç Tarihi" autocomplete="none">
                         <br><br>
                         <input required type="text" id="end-date" name="end-date" placeholder="Bitiş Tarihi" autocomplete="none">
@@ -113,7 +120,7 @@
                         <div id="date-difference"></div>
                         <br>
                         <div id="total-amount"></div>
-                    </div>
+                   
                 
                 
 
