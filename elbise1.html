@@ -105,7 +105,15 @@
                 <small>(örn. 5551234567)</small><br><br>
 
                 
-                    
+                    <div class="vsd" style="z-index: 9999; display: block;">
+                        <input required type="text" id="start-date" name="start-date" placeholder="Başlangıç Tarihi" autocomplete="none">
+                        <br><br>
+                        <input required type="text" id="end-date" name="end-date" placeholder="Bitiş Tarihi" autocomplete="none">
+                        <br>
+                        <div id="date-difference"></div>
+                        <br>
+                        <div id="total-amount"></div>
+                    </div>
                 
                 
 
@@ -120,13 +128,7 @@
 
     <main style="margin-top: 50px;">
         <div class="container">
-        <input required type="text" id="start-date" name="start-date" placeholder="Başlangıç Tarihi" autocomplete="none">
-        <br><br>
-        <input required type="text" id="end-date" name="end-date" placeholder="Bitiş Tarihi" autocomplete="none">
-        <br>
-        <div id="date-difference"></div>
-        <br>
-        <div id="total-amount"></div>
+           
             <div class="grid product">
                 <div class="column-xs-12 column-md-7">
                     <div class="product-gallery">
